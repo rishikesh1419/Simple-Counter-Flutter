@@ -9,7 +9,8 @@ class SimpleCounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Counter',
       theme: ThemeData(
         primarySwatch: blue,
       ),
@@ -44,6 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Counter"),
+      ),
       backgroundColor: black,
       body: Column(
         children: [
@@ -66,7 +70,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: _incrementCounter,
                     child: Container(
                       padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                      child: const Text("+1"),
+                      child: const Text(
+                        "+ = 1",
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                     ),
                   ),
                   SizedBox(
