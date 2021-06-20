@@ -10,11 +10,11 @@ class SimpleCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Counter',
+      title: appName,
       theme: ThemeData(
         primarySwatch: blue,
       ),
-      home: HomeScreen(title: 'Flutter Demo Home Page'),
+      home: HomeScreen(title: appName),
     );
   }
 }
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Counter"),
+        title: const Text(appName),
       ),
       backgroundColor: black,
       body: Column(
@@ -85,8 +85,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ElevatedButton(
                     onPressed: _resetCounter,
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                      child: const Text("Reset"),
+                      padding: EdgeInsets.fromLTRB(22.0, 17.0, 22.0, 17.0),
+                      child: const Text(
+                        "Reset",
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ),
                 ],
